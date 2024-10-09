@@ -1,0 +1,44 @@
+{% form 'customer_login' %}
+	<div class="flex flex-col gap-2">
+		<h2 class="uppercase">Login</h2>
+
+		<div class="flex flex-col gap-1">
+			{% if form.errors %}
+				<div>
+					{{ form.errors | default_errors }}
+				</div>
+			{% endif %}
+
+			<div class="flex flex-col gap-1">
+				<input
+					type="email"
+					name="customer[email]"
+					value="{{ form.email }}"
+					class="block w-full input-primary"
+					placeholder="Email"
+				/>
+				<input
+					type="password"
+					name="customer[password]"
+					value="{{ form.password }}"
+					class="block w-full input-primary"
+					placeholder="Password"
+				/>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-start gap-1">
+			<button
+				type="submit"
+				value="Sign Up" 
+				class="block button button-primary">
+				Login
+			</button>
+			<p class="text-center opacity-50">
+				<a href="#recover" class="link-underline">
+					Forgot your password?
+				</a>
+			</p>
+		</div>
+	</div>
+{% endform %}

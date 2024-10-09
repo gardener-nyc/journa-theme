@@ -1,4 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "current": {
-  }
+	"current": {
+		"sections": {
+			"header": {
+				"type": "header",
+				"settings": {
+					"logo_url": "https://www.journahealth.com",
+					"menu": "header-desktop",
+					"menu_secondary": "header-secondary",
+					"account_url": "/account",
+					"cart_url": "https://www.journahealth.com/cart"
+				}
+			}
+		},
+		"content_for_index": []
+	}
 }

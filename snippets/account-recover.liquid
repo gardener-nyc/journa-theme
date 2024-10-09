@@ -1,0 +1,46 @@
+{% form 'recover_customer_password' %}
+	<input
+		type="hidden"
+		name="return_to"
+		value="/account/login#recover"
+	/>
+
+	<div class="flex flex-col gap-2">
+		<h2 class="uppercase">Reset Password</h2>
+
+		<div class="flex flex-col gap-1">
+			{% if form.posted_successfully? %}
+				<p>
+					We have sent you an email with instructions to reset your password.
+				</p>
+			{% elsif form.errors %}
+				<div>
+					{{ form.errors | default_errors }}
+				</div>
+			{% endif %}
+
+			<input
+				type="email"
+				name="email"
+				value="{{ form.email }}"
+				class="block w-full input-primary"
+				placeholder="Email"
+			/>
+		</div>
+
+		<div class="flex flex-col items-start gap-1">
+			<button
+				type="submit"
+				value="Sign Up" 
+				class="block button button-primary">
+				Reset Password
+			</button>
+
+			<p class="text-center opacity-50">
+				<a href="#login" class="link-underline">
+					Nevermind, I remember.
+				</a>
+			</p>
+		</div>
+	</div>
+{% endform %}
