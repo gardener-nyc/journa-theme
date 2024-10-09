@@ -1,0 +1,9 @@
+#recharge-customer-portal,
+.recharge-theme {
+	margin-top: 50px;
+	@apply font-sans;
+
+	@screen md {
+		margin-top: 120px;
+	}
+}
