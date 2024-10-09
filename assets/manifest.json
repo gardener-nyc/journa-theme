@@ -1,0 +1,44 @@
+{
+  "src/entrypoints/theme.css": {
+    "file": "theme-b05f853b.css",
+    "isEntry": true,
+    "src": "src/entrypoints/theme.css"
+  },
+  "src/entrypoints/theme.js": {
+    "file": "theme-561f4670.js",
+    "isEntry": true,
+    "src": "src/entrypoints/theme.js"
+  },
+  "src/fonts/haltimezone-italic.woff": {
+    "file": "haltimezone-italic-1a774391.woff",
+    "src": "src/fonts/haltimezone-italic.woff"
+  },
+  "src/fonts/haltimezone-italic.woff2": {
+    "file": "haltimezone-italic-31f5fa7c.woff2",
+    "src": "src/fonts/haltimezone-italic.woff2"
+  },
+  "src/fonts/haltimezone-regular.woff": {
+    "file": "haltimezone-regular-d0396836.woff",
+    "src": "src/fonts/haltimezone-regular.woff"
+  },
+  "src/fonts/haltimezone-regular.woff2": {
+    "file": "haltimezone-regular-8ec993d9.woff2",
+    "src": "src/fonts/haltimezone-regular.woff2"
+  },
+  "src/fonts/ppmori-regular.woff": {
+    "file": "ppmori-regular-b1b362d1.woff",
+    "src": "src/fonts/ppmori-regular.woff"
+  },
+  "src/fonts/ppmori-regular.woff2": {
+    "file": "ppmori-regular-87a8c06a.woff2",
+    "src": "src/fonts/ppmori-regular.woff2"
+  },
+  "src/fonts/ppmori-semibold.woff": {
+    "file": "ppmori-semibold-1b5836fa.woff",
+    "src": "src/fonts/ppmori-semibold.woff"
+  },
+  "src/fonts/ppmori-semibold.woff2": {
+    "file": "ppmori-semibold-ae7907fb.woff2",
+    "src": "src/fonts/ppmori-semibold.woff2"
+  }
+}
