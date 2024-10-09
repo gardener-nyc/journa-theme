@@ -1,11 +1,39 @@
 /*
-// === Goudy Old Style ===
+// === PP Mori ===
 */
 
-/*@font-face {
-	font-family: 'Goudy Old Style';
-	src: url('/fonts/goudy-old-style.woff2') format('woff2'),
-		url('/fonts/goudy-old-style.woff') format('woff');
+@font-face {
+	font-family: 'PP Mori';
+	src: url('../../fonts/ppmori-regular.woff2') format('woff2'),
+		url('../../fonts/ppmori-regular.woff') format('woff');
 	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'PP Mori';
+	src: url('../../fonts/ppmori-semibold.woff2') format('woff2'),
+		url('../../fonts/ppmori-semibold.woff') format('woff');
+	font-style: normal;
+	font-weight: 600;
+}
+
+/*
+// === HAL Timezone ===
+*/
+
+@font-face {
+	font-family: 'HAL Timezone';
+	src: url('../../fonts/haltimezone-regular.woff2') format('woff2'),
+		url('../../fonts/haltimezone-regular.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'HAL Timezone';
+	src: url('../../fonts/haltimezone-italic.woff2') format('woff2'),
+		url('../../fonts/haltimezone-italic.woff') format('woff');
+	font-style: italic;
 	font-weight: 400;
 }

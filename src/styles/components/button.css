@@ -1,6 +1,6 @@
 button,
 .button {
-	@apply text-sans-16 font-sans;
+	@apply font-sans text-15;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -50,12 +50,257 @@ button,
 	&.block {
 		display: block;
 	}
-
-	&.border-r-0 {
-		border-radius: 0;
+	&.flex {
+		display: flex;
 	}
 
 	&.text-left {
 		text-align: left;
+	}
+}
+
+@layer components {
+	.button.button-size-primary {
+		@apply font-sans text-15 md:text-17 tracking-tight px-4;
+		height: 55px;
+		border-radius: 55px;
+		line-height: 55px;
+
+		.button-bg {
+			@apply w-[150%] h-[110px] rounded-full absolute top-[-50%] left-[-25%];
+			transition: transform 800ms theme('transitionTimingFunction.appear');
+			transform: scaleY(0);
+			transform-origin: top;
+		}
+
+		&:hover,
+		&:focus,
+		&.active {
+			.button-bg {
+				transform: scaleY(100%);
+				transform-origin: bottom;
+			}
+
+			&.disabled,
+			&:disabled {
+				.button-bg {
+					transform: scaleY(0);
+					transform-origin: top;
+				}
+			}
+		}
+	}
+
+	.button.button-size-newsletter {
+		@apply font-sans text-15 md:text-17 tracking-tight px-4;
+		height: 44px;
+		border-radius: 44px;
+		line-height: 44px;
+
+		.button-bg {
+			@apply w-[150%] h-[88px] rounded-full absolute top-[-50%] left-[-25%];
+			transition: transform 800ms theme('transitionTimingFunction.appear');
+			transform: scaleY(0);
+			transform-origin: top;
+		}
+
+		&:hover,
+		&:focus,
+		&.active {
+			.button-bg {
+				transform: scaleY(100%);
+				transform-origin: bottom;
+			}
+
+			&.disabled,
+			&:disabled {
+				.button-bg {
+					transform: scaleY(0);
+					transform-origin: top;
+				}
+			}
+		}
+	}
+
+	.button.button-size-search {
+		@apply font-sans text-15 md:text-17 tracking-tight px-4;
+		height: 60px;
+		border-radius: 60px;
+		line-height: 60px;
+
+		.button-bg {
+			@apply w-[150%] h-[120px] rounded-full absolute top-[-50%] left-[-25%];
+			transition: transform 800ms theme('transitionTimingFunction.appear');
+			transform: scaleY(0);
+			transform-origin: top;
+		}
+
+		&:hover,
+		&:focus,
+		&.active {
+			.button-bg {
+				transform: scaleY(100%);
+				transform-origin: bottom;
+			}
+
+			&.disabled,
+			&:disabled {
+				.button-bg {
+					transform: scaleY(0);
+					transform-origin: top;
+				}
+			}
+		}
+	}
+
+	.button.button-primary-black {
+		@apply relative overflow-hidden;
+		@apply transition-colors duration-400 ease-in-out-cubic;
+		@apply text-white bg-black border-black border-solid border;
+
+		&:hover,
+		&:focus,
+		&.active {
+			@apply text-black duration-200;
+
+			&.disabled,
+			&:disabled {
+				@apply text-white;
+			}
+		}
+
+		.button-text {
+			position: relative;
+			z-index: 1;
+		}
+
+		.button-bg {
+			@apply bg-white;
+		}
+	}
+
+	.button.button-secondary-black {
+		@apply relative overflow-hidden;
+		@apply transition-colors duration-400 ease-in-out-cubic;
+		@apply text-black border-black border-solid border;
+
+		&:hover,
+		&:focus,
+		&.active {
+			@apply text-white duration-200;
+
+			&.disabled,
+			&:disabled {
+				@apply text-black;
+			}
+		}
+
+		.button-text {
+			position: relative;
+			z-index: 1;
+		}
+
+		.button-bg {
+			@apply bg-black;
+		}
+	}
+
+	.button.button-primary-white {
+		@apply relative overflow-hidden;
+		@apply transition-colors duration-400 ease-in-out-cubic;
+		@apply text-black bg-white border-white border-solid border;
+
+		&:hover,
+		&:focus,
+		&.active {
+			@apply text-white duration-200;
+
+			&.disabled,
+			&:disabled {
+				@apply text-black;
+			}
+		}
+
+		.button-text {
+			position: relative;
+			z-index: 1;
+		}
+
+		.button-bg {
+			@apply bg-black;
+		}
+	}
+
+	.button.button-header {
+		@apply transition-colors ease-in-out-cubic duration-400 bg-white text-black;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		border-radius: 50px;
+
+		&:hover,
+		&:focus,
+		&.active {
+			@apply bg-black text-white;
+		}
+	}
+
+	.button.button-cart {
+		@apply transition-colors ease-in-out-cubic duration-400 text-black;
+
+		.button-cart__bg {
+			@apply transition-colors ease-in-out-cubic duration-400 text-white;
+		}
+
+		&:hover,
+		&:focus,
+		&.active {
+			@apply text-white;
+
+			.button-cart__bg {
+				@apply text-black;
+			}
+		}
+	}
+
+	.button.button-press {
+		@apply duration-400 ease-in-out-cubic;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 20px;
+		border-radius: 40px;
+		background: transparent;
+		transition-property: background-color;
+
+		@screen md {
+			height: 50px;
+			border-radius: 50px;
+			line-height: 50px;
+		}
+
+		img {
+			@apply duration-400 ease-in-out-cubic;
+			filter: invert(79%) sepia(18%) saturate(144%) hue-rotate(169deg)
+				brightness(86%) contrast(83%);
+			opacity: 0.5;
+			transition-property: filter, opacity;
+		}
+
+		&:hover,
+		&:focus {
+			img {
+				opacity: 1;
+			}
+		}
+
+		&.active {
+			@apply bg-gray;
+
+			img {
+				filter: invert(88%) sepia(2%) saturate(135%) hue-rotate(182deg)
+					brightness(111%) contrast(93%);
+				opacity: 1;
+			}
+		}
 	}
 }

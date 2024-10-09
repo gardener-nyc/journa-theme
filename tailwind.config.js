@@ -1,31 +1,37 @@
+const reduce = require('lodash/reduce');
+
 //
 // === Project Config ===
 //
 const COLORS = {
-	black: '#000',
-	white: '#fff',
+	black: '#0B182B',
+	white: '#FFF',
+	offwhite: '#F1F2F4',
+	gray: '#A5ADB5',
+	'gray-medium': '#4F5D70',
+	'gray-dark': '#2C394C',
+	'product-bondia': '#994C72',
 };
 
 const SPACING = {
 	'container-mobile': '20px',
-	'container-desktop': '20px',
+	'container-desktop': '36px',
 	'gutter-mobile': '20px',
-	'gutter-desktop': '20px',
+	'gutter-desktop': '32px',
 };
 
 const FONT_FAMILIES = {
 	sans: [
-		'Helvetica Neue LT Std',
-		'-apple-system',
-		'BlinkMacSystemFont',
-		'Helvetica Neue',
-		'Helvetica',
-		'sans-serif',
+		"'PP Mori', 'Helvetica Neue LT Std', -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif",
+		{
+			fontFeatureSettings: '"ss02" on',
+		},
 	],
+	serif: ['HAL Timezone', 'Georgia', 'serif'],
 };
 
 const GRID_COLUMNS = 12;
-const GRID_MAX_WIDTH = 1600;
+const GRID_MAX_WIDTH = 1900;
 
 const MAX_SPACER = 100;
 const MAX_Z_INDEX = 100;
@@ -45,6 +51,7 @@ const generateValues = (max, factor = 1, unit = 'px') =>
 
 const theme = {
 	screens: {
+		'2xs': '360px',
 		xs: '400px',
 		sm: '600px',
 		md: '800px',
@@ -93,10 +100,12 @@ const theme = {
 	}),
 	borderRadius: {
 		0: '0px',
+		5: '5px',
 		10: '10px',
-		20: '20px',
+		40: '40px',
+		50: '50px',
+		80: '80px',
 		full: '100%',
-		...generateValues(100),
 	},
 	fontFamily: FONT_FAMILIES,
 	fontSize: {
@@ -116,8 +125,21 @@ const theme = {
 		800: 800,
 		900: 900,
 	},
+	letterSpacing: {
+		tighter: '-0.03em',
+		tight: '-0.02em',
+		normal: '0',
+		wide: '0.04em',
+	},
 	maxWidth: {
 		grid: `${GRID_MAX_WIDTH}px`,
+		...generateValues(100, 10),
+	},
+	height: {
+		auto: 'auto',
+		full: '100%',
+		...generateValues(MAX_SPACER, 10),
+		...SPACING,
 	},
 	transitionTimingFunction: {
 		DEFAULT: 'cubic-bezier(0.16, 1, 0.3, 1)',
@@ -147,17 +169,43 @@ const theme = {
 		'in-out-circ': 'cubic-bezier(0.785, 0.135, 0.15, 0.86)',
 		'in-out-back': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
 	},
+	transitionDuration: {
+		100: '100ms',
+		200: '200ms',
+		300: '300ms',
+		400: '400ms',
+		500: '500ms',
+		600: '600ms',
+		700: '700ms',
+		800: '800ms',
+		900: '900ms',
+		1000: '1000ms',
+	},
 	zIndex: {
 		auto: 'auto',
 		...generateValues(MAX_Z_INDEX, 10, ''),
 	},
-	extend: {},
+	aspectRatio: {
+		square: '1 / 1',
+		video: '1920 / 1080',
+	},
+	// Shadow generator: https://www.joshwcomeau.com/shadow-palette/
+	boxShadow: {
+		low: '0px 1px 1.1px hsl(221deg 4% 73% / 0.06), 0px 1.5px 1.7px -1.2px hsl(221deg 4% 73% / 0.06), 0px 3.2px 3.6px -2.5px hsl(221deg 4% 73% / 0.06)',
+		medium: '0px 1px 1.1px hsl(221deg 4% 73% / 0.22), 0px 2.8px 3.1px -0.8px hsl(221deg 4% 73% / 0.22), 0px 6.7px 7.5px -1.7px hsl(221deg 4% 73% / 0.22), 0.1px 16.1px 18.1px -2.5px hsl(221deg 4% 73% / 0.22)',
+		high: '0px 1px 1.1px hsl(221deg 4% 73% / 0.2), 0px 3.9px 4.4px -0.4px hsl(221deg 4% 73% / 0.2), 0px 7px 7.9px -0.7px hsl(221deg 4% 73% / 0.2), 0px 11.2px 12.6px -1.1px hsl(221deg 4% 73% / 0.2), 0.1px 17.7px 19.9px -1.4px hsl(221deg 4% 73% / 0.2), 0.1px 27.5px 30.9px -1.8px hsl(221deg 4% 73% / 0.2), 0.1px 41.5px 46.7px -2.1px hsl(221deg 4% 73% / 0.2), 0.2px 61px 68.6px -2.5px hsl(221deg 4% 73% / 0.2)',
+	},
 };
 
 module.exports = {
 	content: [
-		'./src/pages/**/*.{js,ts,jsx,tsx}',
-		'./src/components/**/*.{js,ts,jsx,tsx}',
+		'./assets/**/*.liquid',
+		'./config/**/*.liquid',
+		'./layout/**/*.liquid',
+		'./sections/**/*.liquid',
+		'./snippets/**/*.liquid',
+		'./templates/**/*.liquid',
+		'./src/components/**/*.{js,jsx,ts,tsx}',
 	],
 	darkMode: 'class',
 	theme,

@@ -1,5 +1,5 @@
 {
-	"name": "shopify-starter",
+	"name": "journa-theme",
 	"version": "1.0.0",
 	"scripts": {
 		"start": "npm-run-all --parallel vite:dev theme:dev",
@@ -8,7 +8,7 @@
 		"vite:dev": "vite dev",
 		"vite:build": "vite build",
 		"// THEME //": "",
-		"theme:dev": "shopify theme dev --store sprout-starter",
+		"theme:dev": "shopify theme dev --store b85c47-a7",
 		"theme:push:all": "yarn build && shopify theme push",
 		"theme:push:theme": "yarn build && shopify theme push -x 'templates/*.json' -x 'config/settings_schema.json'",
 		"theme:pull:all": "shopify theme pull --nodelete",
@@ -16,7 +16,7 @@
 	},
 	"author": "https://www.gardener.nyc",
 	"license": "MIT",
-	"homepage": "https://github.com/gardener-nyc/shopify-starter",
+	"homepage": "https://github.com/gardener-nyc/journa-theme",
 	"devDependencies": {
 		"babel-eslint": "^10.0.3",
 		"eslint": "^6.5.1",

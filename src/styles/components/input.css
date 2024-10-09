@@ -1,6 +1,6 @@
 input,
 textarea {
-	@apply text-sans-16 font-sans;
+	@apply font-sans text-15;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: theme('colors.black');
@@ -17,27 +17,27 @@ textarea {
 
 	&::-webkit-input-placeholder {
 		color: currentColor;
-		opacity: 1;
+		opacity: 0.3;
 	}
 
 	&::-moz-placeholder {
 		color: currentColor;
-		opacity: 1;
+		opacity: 0.3;
 	}
 
 	&:-ms-input-placeholder {
 		color: currentColor;
-		opacity: 1;
+		opacity: 0.3;
 	}
 
 	&:-moz-placeholder {
 		color: currentColor;
-		opacity: 1;
+		opacity: 0.3;
 	}
 
 	&:placeholder {
 		color: currentColor;
-		opacity: 1;
+		opacity: 0.3;
 	}
 
 	&:-webkit-autofill,
@@ -73,6 +73,100 @@ textarea {
 
 		* {
 			cursor: wait !important;
+		}
+	}
+}
+
+@layer components {
+	.input-newsletter {
+		@apply font-sans text-18/18 md:text-28/28;
+		height: 60px;
+		line-height: 60px;
+		background-image: linear-gradient(
+			to left,
+			theme('colors.gray') 0,
+			theme('colors.gray') 5px,
+			transparent 6px,
+			transparent 100%
+		);
+		background-position: 0 100%;
+		background-size: 10px 1px;
+		background-repeat: repeat-x;
+		will-change: background-position, transform;
+
+		&:hover {
+			animation: input-newsletter-hover 1s infinite linear;
+		}
+
+		&:focus,
+		&:active {
+			background-image: linear-gradient(
+				to left,
+				theme('colors.black') 0,
+				theme('colors.black') 100%
+			);
+		}
+
+		@screen md {
+			height: 75px;
+			line-height: 75px;
+		}
+
+		&::-webkit-input-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&::-moz-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&:-ms-input-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&:-moz-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&:placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+	}
+
+	.input-faq-search {
+		@apply font-serif text-16/40 italic border border-solid px-2;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 40px;
+
+		&::-webkit-input-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&::-moz-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&:-ms-input-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&:-moz-placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
+		}
+
+		&:placeholder {
+			color: theme('colors.gray');
+			opacity: 1;
 		}
 	}
 }
