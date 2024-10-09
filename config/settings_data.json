@@ -1,26 +1,46 @@
 /*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-	"current": {
-		"sections": {
-			"header": {
-				"type": "header",
-				"settings": {
-					"logo_url": "https://www.journahealth.com",
-					"menu": "header-desktop",
-					"menu_secondary": "header-secondary",
-					"account_url": "/account",
-					"cart_url": "https://www.journahealth.com/cart"
-				}
-			}
-		},
-		"content_for_index": []
-	}
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_url": "https://www.journahealth.com",
+          "menu": "header-desktop",
+          "menu_secondary": "header-secondary",
+          "account_url": "/account",
+          "cart_url": "https://www.journahealth.com/cart"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "17151115064775110295": {
+        "type": "shopify://apps/recharge-subscriptions/blocks/recharge-theme/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
+        "settings": {
+          "color_brand": "#0b182b",
+          "contrast_color": "#FFFFFF",
+          "color_brand_secondary": "#0b182b",
+          "corners": "16px",
+          "app_background": "#f1f2f4",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#FFFFFF",
+          "cards_border_color": "rgba(0,0,0,0)"
+        }
+      }
+    }
+  }
 }
